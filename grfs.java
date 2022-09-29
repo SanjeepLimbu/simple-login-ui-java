@@ -5,7 +5,7 @@ public class grfs{
 	JFrame jframe = new JFrame();
 	JLabel label = new JLabel("Login to continue");
 	JButton btn = new JButton("Login");
-
+         jframe.setTitle("Simple Login UI Java);
 	JLabel name = new JLabel("Enter your name");
     JTextField namefield = new JTextField();
 	
