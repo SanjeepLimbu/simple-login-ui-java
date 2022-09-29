@@ -19,17 +19,17 @@ public class grfs{
 	JLabel note = new JLabel("This project is made and modified by @Krish Bishwakarma");
 	
 	
-	  label.setBounds(160,0,200,50);
+     label.setBounds(160,0,200,50);
      name.setBounds(115,40,200,50);
      namefield.setBounds(115,80,200,40);
       
   
 	
-    number.setBounds(115,120,200,50);
+        number.setBounds(115,120,200,50);
 	numberfield.setBounds(115,160,200,40);
 
 	pass.setBounds(115,200,200,50);
-      passfield.setBounds(115,240,200,40);
+        passfield.setBounds(115,240,200,40);
 	
 	
 	btn.setBounds(160,300,100,40);
