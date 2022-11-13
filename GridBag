@@ -1,0 +1,115 @@
+// Program to use GridBagLayout.
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class GridBagLayoutDemo1 extends Frame
+{
+	GridBagLayout gb;
+	GridBagConstraints gbc;
+	Button b1, b2, b3, b4, b5, b6, b7;
+
+	public GridBagLayoutDemo1( String s )
+	{
+		super( s );
+				
+		gb = new GridBagLayout();
+		gbc = new GridBagConstraints();
+		setLayout( gb );
+
+		b1 = new Button( "B1" );
+		b2 = new Button( "B2" );
+		b3 = new Button( "B3" );
+		b4 = new Button( "B4" );
+		b5 = new Button( "B5" );
+		b6 = new Button( "B6" );
+		b7 = new Button( "B7" );
+
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		gbc.gridwidth = 1;
+		gbc.gridheight = 1;
+		gbc.weightx = 1;	
+		gbc.weighty = 1;
+		gbc.fill = GridBagConstraints.BOTH;
+		gb.setConstraints( b1, gbc );		
+
+		gbc.gridx = 1;
+		gbc.gridy = 0;
+		gbc.gridwidth = 2;
+		gbc.gridheight = 1;
+		gbc.weightx = 1;	
+		gbc.weighty = 1;
+		gbc.fill = GridBagConstraints.BOTH;
+		gb.setConstraints( b2, gbc );
+
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		gbc.gridwidth = 1;
+		gbc.gridheight = 2;
+		gbc.weightx = 1;	
+		gbc.weighty = 1;
+		gbc.fill = GridBagConstraints.BOTH;
+		gb.setConstraints( b3, gbc );
+
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		gbc.gridwidth = 2;
+		gbc.gridheight = 1;
+		gbc.weightx = 1;	
+		gbc.weighty = 1;
+		gbc.fill = GridBagConstraints.BOTH;
+		gb.setConstraints( b4, gbc );
+
+		gbc.gridx = 1;
+		gbc.gridy = 2;
+		gbc.gridwidth = 1;
+		gbc.gridheight = 1;
+		gbc.weightx = 1;	
+		gbc.weighty = 1;
+		gbc.fill = GridBagConstraints.BOTH;
+		gb.setConstraints( b5, gbc );
+
+		gbc.gridx = 2;
+		gbc.gridy = 2;
+		gbc.gridwidth = 1;
+		gbc.gridheight = 1;
+		gbc.weightx = 1;	
+		gbc.weighty = 1;
+		gbc.fill = GridBagConstraints.BOTH;
+		gb.setConstraints( b6, gbc );
+
+		gbc.gridx = 0;
+		gbc.gridy = 3;
+		gbc.gridwidth = 3;
+		gbc.gridheight = 1;
+		gbc.weightx = 1;	
+		gbc.weighty = 1;
+		gbc.fill = GridBagConstraints.BOTH;
+		gb.setConstraints( b7, gbc );
+
+		add( b1 );
+		add( b2 );
+		add( b3 );
+		add( b4 );
+		add( b5 );
+		add( b6 );
+		add( b7 );
+
+		setVisible( true );
+		setSize( 300, 200 );
+	}
+
+	public static void main( String args[ ] )
+	{
+		GridBagLayoutDemo1 g = new GridBagLayoutDemo1( "GridBag Layout" );
+		g.addWindowListener( new WindowAdapter()
+		{
+		       public void windowClosing( WindowEvent we )
+			{
+				System.exit( 0 );
+			}
+		} );
+	}
+}
+
